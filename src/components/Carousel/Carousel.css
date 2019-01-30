@@ -1,0 +1,9 @@
+.carousel-control-prev, .carousel-control-next {
+    margin-top: 300px;
+    max-height: 300px;
+}
+
+.carousel-item img {
+    max-height: 800px;
+    object-fit: cover;
+}

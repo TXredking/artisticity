@@ -1,0 +1,8 @@
+.card-body {
+    background-color: #10D0CD;
+}
+
+#card1CarouselControls img {
+    max-height: 400px;
+    object-fit: cover;
+}

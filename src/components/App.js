@@ -14,7 +14,7 @@ class App extends Component {
       <div>
       <Navbar />
        <main role="main">
-         <Carousel img_list={images}/>
+         <Carousel img_list={images} carousel_id="mainCarouselControls"/>
          <Jumbotron />
          <Gallery />
        </main>

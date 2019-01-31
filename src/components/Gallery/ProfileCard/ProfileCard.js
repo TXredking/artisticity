@@ -4,7 +4,7 @@ import Carousel from '../../Carousel/Carousel';
 
 class ProfileCard extends Component {
     render () {
-        const { style_id, alt, profile_img, name, other_imgs } = this.props.profile;
+        const { carousel_id, style_id, alt, profile_img, name, other_imgs } = this.props.profile;
         const images = [...other_imgs, {src: profile_img}];
 
         return (
@@ -27,7 +27,7 @@ class ProfileCard extends Component {
                         </button>
                       </div>
                       <div className="modal-body">
-                        <Carousel img_list={images}/>
+                        <Carousel img_list={images} carousel_id={carousel_id}/>
                       </div>
                       <div className="modal-footer">
                         <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>

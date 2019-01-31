@@ -1,53 +1,33 @@
 import React, { Component } from 'react';
 import './ProfileCard.css';
+import Carousel from '../../Carousel/Carousel';
 
 class ProfileCard extends Component {
     render () {
-        // let carouselImages = [];
-        // if (this.props.profile.other_imgs) {
-        //     carouselImages = this.props.profile.other_imgs.map(image => {
-        //         return <div className="carousel-item active">
-        //             <img className="d-block w-100" src={image} />
-        //         </div>
-        //     });
-        // }
+        const { style_id, alt, profile_img, name, other_imgs } = this.props.profile;
+        const images = [...other_imgs, {src: profile_img}];
 
         return (
             <div>
                 <div className="card mb-4 box-shadow">
-                  <a href={`#${this.props.profile.style_id}`} data-toggle="modal" className="card">
-                      <img className="card-img-top" alt={this.props.profile.alt} src={this.props.profile.profile_img} />
+                  <a href={`#${style_id}`} data-toggle="modal" className="card">
+                      <img className="card-img-top" alt={alt} src={profile_img} />
                   </a>
                   <div className="card-body">
-                    <p className="card-text text-center lead">{this.props.profile.name}</p>
+                    <p className="card-text text-center lead">{name}</p>
                   </div>
                 </div>
-                <div className="modal fade" id={this.props.profile.style_id} tabIndex={-1} role="dialog">
+                <div className="modal fade" id={style_id} tabIndex={-1} role="dialog">
                   <div className="modal-dialog modal-dialog-centered modal-lg" role="document">
                     <div className="modal-content">
                       <div className="modal-header">
-                        <h5 className="modal-title">{this.props.profile.name}</h5>
+                        <h5 className="modal-title">{name}</h5>
                         <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                           <span aria-hidden="true">×</span>
                         </button>
                       </div>
                       <div className="modal-body">
-                          <div className="carousel-item active">
-                             <img className="d-block w-100" src={this.props.profile.profile_img} />
-                          </div>
-                        {/* <div id={this.props.profile.carousel_id} className="carousel slide" data-ride="carousel">
-                          <div className="carousel-inner">
-                            { carouselImages }
-                          </div>
-                        </div>
-                        <a className="carousel-control-prev" href={`#${this.props.profile.carousel_id}`} role="button" data-slide="prev">
-                          <span className="carousel-control-prev-icon" aria-hidden="true" />
-                          <span className="sr-only">Previous</span>
-                        </a>
-                        <a className="carousel-control-next" href={`#${this.props.profile.carousel_id}`}  role="button" data-slide="next">
-                          <span className="carousel-control-next-icon" aria-hidden="true" />
-                          <span className="sr-only">Next</span>
-                        </a> */}
+                        <Carousel img_list={images}/>
                       </div>
                       <div className="modal-footer">
                         <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>

@@ -3,31 +3,18 @@ import './Carousel.css';
 
 class Carousel extends Component {
     render () {
+        const { img_list } = this.props;
+        let carouselImages = img_list ? img_list.map((image, i) => {
+                return <div className="carousel-item active" key={i}>
+                    <img className="d-block w-100" src={image.src} alt="need-to-change"/>
+                </div>
+            }) : [];
+
         return (
             <div>
                <div id="carouselControls" className="carousel slide" data-ride="carousel">
                  <div className="carousel-inner">
-                   <div className="carousel-item active">
-                     <img className="d-block w-100" src="./assets/images/carousel/adam-jang-260876-unsplash.jpg" alt="adam-jang-260876-unsplash" />
-                   </div>
-                   <div className="carousel-item">
-                     <img className="d-block w-100" src="./assets/images/carousel/dave-1144193-unsplash.jpg" alt="dave-1144193-unsplash" />
-                   </div>
-                   <div className="carousel-item">
-                     <img className="d-block w-100" src="./assets/images/carousel/evelyn-semenyuk-653626-unsplash.jpg" alt="evelyn-semenyuk-653626-unsplash" />
-                   </div>
-                   <div className="carousel-item">
-                     <img className="d-block w-100" src="./assets/images/carousel/luis-alfonso-orellana-246919-unsplash.jpg" alt="luis-alfonso-orellana-246919-unsplash" />
-                   </div>
-                   <div className="carousel-item">
-                     <img className="d-block w-100" src="./assets/images/carousel/nathan-dumlao-532284-unsplash.jpg" alt="nathan-dumlao-532284-unsplash" />
-                   </div>
-                   <div className="carousel-item">
-                     <img className="d-block w-100" src="./assets/images/carousel/nick-fewings-701074-unsplash.jpg" alt="nick-fewings-701074-unsplash" />
-                   </div>
-                   <div className="carousel-item">
-                     <img className="d-block w-100" src="./assets/images/carousel/this-guy-458907-unsplash.jpg" alt="this-guy-458907-unsplash" />
-                   </div>
+                     {carouselImages}
                  </div>
                </div>
                <a className="carousel-control-prev" href="#carouselControls" role="button" data-slide="prev">

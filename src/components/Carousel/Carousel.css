@@ -7,3 +7,12 @@
     max-height: 800px;
     object-fit: cover;
 }
+
+.profile-carousels img {
+    max-height: 400px;
+    object-fit: cover;
+}
+
+.fas {
+    font-size: 100px;
+}

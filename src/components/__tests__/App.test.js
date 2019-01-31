@@ -1,11 +1,11 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import App from '../App';
-import Navbar from '../Navbar';
-import Carousel from '../Carousel/Carousel';
-import Jumbotron from '../Jumbotron';
-import Gallery from '../Gallery/Gallery';
-import Footer from '../Footer';
+import App from 'components/App';
+import Navbar from 'components/Navbar';
+import Carousel from 'components/Carousel/Carousel';
+import Jumbotron from 'components/Jumbotron';
+import Gallery from 'components/Gallery/Gallery';
+import Footer from 'components/Footer';
 
 let wrapped;
 

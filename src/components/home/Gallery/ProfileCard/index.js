@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './ProfileCard.css';
-import Carousel from '../../Carousel/Carousel';
+import Carousel from '../../Carousel';
 
 class ProfileCard extends Component {
     render () {

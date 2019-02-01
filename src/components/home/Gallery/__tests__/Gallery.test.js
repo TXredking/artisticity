@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Gallery from 'components/Gallery/Gallery';
-import ProfileCard from 'components/Gallery/ProfileCard/ProfileCard'
+import Gallery from 'components/home/Gallery';
+import ProfileCard from 'components/home/Gallery/ProfileCard'
 
 let wrapped;
 

@@ -1,34 +1,37 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
+import { MemoryRouter } from 'react-router';
 import App from 'components/App';
-import Navbar from 'components/Navbar';
-import Carousel from 'components/Carousel/Carousel';
-import Jumbotron from 'components/Jumbotron';
-import Gallery from 'components/Gallery/Gallery';
-import Footer from 'components/Footer';
+import Home from 'components/home';
+import About from 'components/about';
+import Contact from 'components/contact';
 
-let wrapped;
+it('shows the Home app for the root path',  () => {
+    const wrapped = mount(
+        <MemoryRouter initialEntries={['/']}>
+            <App />
+        </MemoryRouter>
+    )
 
-beforeEach(() => {
-    wrapped = shallow(<App />);
+    expect(wrapped.find(Home).length).toEqual(1);
 });
 
-it('shows a Navbar',  () => {
-    expect(wrapped.find(Navbar).length).toEqual(1);
+it('shows the About app for the about path',  () => {
+    const wrapped = mount(
+        <MemoryRouter initialEntries={['/about']}>
+            <App />
+        </MemoryRouter>
+    )
+
+    expect(wrapped.find(About).length).toEqual(1);
 });
 
-it('shows a Carousel',  () => {
-    expect(wrapped.find(Carousel).length).toEqual(1);
-});
+it('shows the Contact app for the contact path',  () => {
+    const wrapped = mount(
+        <MemoryRouter initialEntries={['/contact']}>
+            <App />
+        </MemoryRouter>
+    )
 
-it('shows a Jumbotron',  () => {
-    expect(wrapped.find(Jumbotron).length).toEqual(1);
-});
-
-it('shows a Gallery',  () => {
-    expect(wrapped.find(Gallery).length).toEqual(1);
-});
-
-it('shows a Footer',  () => {
-    expect(wrapped.find(Footer).length).toEqual(1);
+    expect(wrapped.find(Contact).length).toEqual(1);
 });

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import ProfileCard from './ProfileCard/ProfileCard';
+import ProfileCard from './ProfileCard';
 import './Gallery.css';
-import profiles from '../../profiles';
+import profiles from '../../../profiles';
 
 class Gallery extends Component {
     render () {

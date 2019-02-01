@@ -1,25 +1,19 @@
 import React, { Component } from 'react';
+import { Route } from 'react-router-dom';
 import './App.css';
-import Navbar from './Navbar';
-import Carousel from './Carousel/Carousel';
-import Jumbotron from './Jumbotron';
-import Footer from './Footer';
-import Gallery from './Gallery/Gallery';
 
-import images from '../images';
+import Home from './home';
+import About from './about';
+import Contact from './contact';
 
 class App extends Component {
   render() {
     return (
       <div>
-      <Navbar />
-       <main role="main">
-         <Carousel img_list={images} carousel_id="mainCarouselControls"/>
-         <Jumbotron />
-         <Gallery />
-       </main>
-       <Footer />
-     </div>
+        <Route path="/" exact component={Home} />
+        <Route path="/about" component={About} />
+        <Route path="/contact" component={Contact} />
+      </div>
     );
   }
 }

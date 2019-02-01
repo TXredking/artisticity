@@ -5,9 +5,23 @@ import App from 'components/App';
 import Home from 'components/home';
 import About from 'components/about';
 import Contact from 'components/contact';
+import Navbar from 'components/common/Navbar';
+import Footer from 'components/common/Footer';
+
+let wrapped;
+
+it('shows a Navbar',  () => {
+    wrapped = shallow(<App />);
+    expect(wrapped.find(Navbar).length).toEqual(1);
+});
+
+it('shows a Footer',  () => {
+    wrapped = shallow(<App />);
+    expect(wrapped.find(Footer).length).toEqual(1);
+});
 
 it('shows the Home app for the root path',  () => {
-    const wrapped = mount(
+    wrapped = mount(
         <MemoryRouter initialEntries={['/']}>
             <App />
         </MemoryRouter>
@@ -17,7 +31,7 @@ it('shows the Home app for the root path',  () => {
 });
 
 it('shows the About app for the about path',  () => {
-    const wrapped = mount(
+    wrapped = mount(
         <MemoryRouter initialEntries={['/about']}>
             <App />
         </MemoryRouter>
@@ -27,7 +41,7 @@ it('shows the About app for the about path',  () => {
 });
 
 it('shows the Contact app for the contact path',  () => {
-    const wrapped = mount(
+    wrapped = mount(
         <MemoryRouter initialEntries={['/contact']}>
             <App />
         </MemoryRouter>

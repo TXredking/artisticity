@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
+import Navbar from 'components/common/Navbar';
+import Footer from 'components/common/Footer';
 import './App.css';
 
 import Home from './home';
@@ -10,9 +12,11 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Route path="/" exact component={Home} />
-        <Route path="/about" component={About} />
-        <Route path="/contact" component={Contact} />
+        <Navbar />
+            <Route path="/" exact component={Home} />
+            <Route path="/about" component={About} />
+            <Route path="/contact" component={Contact} />
+        <Footer />
       </div>
     );
   }

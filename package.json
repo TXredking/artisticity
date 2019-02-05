@@ -1,7 +1,8 @@
 {
-  "name": "artisticity_v0.2",
+  "name": "artisticity-web-app",
   "version": "0.1.0",
   "private": true,
+  "authors": ["TXredking"],
   "dependencies": {
     "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.8.0",

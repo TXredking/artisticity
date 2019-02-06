@@ -1,0 +1,15 @@
+main {
+    margin: 50px 0px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.about-images img {
+    object-fit: cover;
+    width: 350px;
+    max-height: 350px;
+    margin-top: 20px;
+    box-shadow: -5px 5px lightgrey;
+}

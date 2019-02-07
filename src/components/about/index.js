@@ -6,14 +6,14 @@ class About extends Component {
         return (
             <div>
                 <main role="main">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-4 about-images">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-4 about-images">
                                 <img src="./assets/images/carousel/dave-1144193-unsplash.jpg"/>
                                 <img src="./assets/images/carousel/this-guy-458907-unsplash.jpg"/>
                                 <img src="./assets/images/carousel/evelyn-semenyuk-653626-unsplash.jpg"/>
                             </div>
-                            <div class="col-8">
+                            <div className="col-8">
                                 <h2>Why?</h2>
                                 <p>
                                 I love all kinds of art but I am saddened by the lack of it in our daily lives.
@@ -42,13 +42,13 @@ class About extends Component {
                                 of web to connect kindred spirits; artists and those that love their art, no matter how few or how
                                 far apart. There is something magical though about walking through one's neighborhood or city and
                                 feeling your surroundings coming alive...
+                                </p>
                                  <ul>
                                     <li>A musician playing some Jazz on Bourbon Street in New Orleans.</li>
                                     <li>Artists selling landscapes or portaitures in Lima, Peru.</li>
                                     <li>An impromptu group of dancers performing on Long Beach boardwalk.</li>
                                     <li>A wall size mural to commemorate the heroes of the local community?</li>
                                 </ul>
-                                </p>
                                 <h2>How?</h2>
                                 <p>
                                 Artisticity's aim is connect all those artists out there that want to leave a mark on their community

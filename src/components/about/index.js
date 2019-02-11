@@ -9,9 +9,9 @@ class About extends Component {
                     <div className="container">
                         <div className="row">
                             <div className="col-4 about-images">
-                                <img src="./assets/images/carousel/dave-1144193-unsplash.jpg"/>
-                                <img src="./assets/images/carousel/this-guy-458907-unsplash.jpg"/>
-                                <img src="./assets/images/carousel/evelyn-semenyuk-653626-unsplash.jpg"/>
+                                <img src="./assets/images/carousel/luis-alfonso-orellana-246919-unsplash.jpg" alt="By Luis Alfonso Orellana on Unsplash"/>
+                                <img src="./assets/images/carousel/this-guy-458907-unsplash.jpg" alt="By This Guy on Unsplash"/>
+                                <img src="./assets/images/carousel/evelyn-semenyuk-653626-unsplash.jpg" alt="By Evelyn Semenyuk on Unsplash"/>
                             </div>
                             <div className="col-8">
                                 <h2 id="about-title">Why?</h2>

@@ -1,0 +1,11 @@
+#mvp-banner {
+    position: relative;
+    top: 0px;
+    z-index: 1;
+    border: none;
+    margin: 0px;
+    background-color: #E0FBFC;
+    color: #07020D;
+    font-size: 20px;
+    text-align: center;
+}

@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 import Home from 'components/home';
 import Carousel from 'components/home/Carousel';
 import Gallery from 'components/home/Gallery';
-import Jumbotron from 'components/common/Jumbotron';
+import Jumbotron from 'components/home/Jumbotron';
 
 let wrapped;
 

@@ -1,0 +1,16 @@
+#contact-main {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#contact-form {
+    border: 1px solid lightgrey;
+    box-shadow: 5px 5px grey;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+#form-submit {
+    background-color: #10D0CD;
+    border-color: #10D0CD;
+}

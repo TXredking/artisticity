@@ -5,7 +5,7 @@ class About extends Component {
     render (){
         return (
             <div>
-                <main role="main">
+                <main role="main" id="about-main">
                     <div className="container">
                         <div className="row">
                             <div className="col-4 about-images">
@@ -14,7 +14,7 @@ class About extends Component {
                                 <img src="./assets/images/carousel/evelyn-semenyuk-653626-unsplash.jpg"/>
                             </div>
                             <div className="col-8">
-                                <h2>Why?</h2>
+                                <h2 id="about-title">Why?</h2>
                                 <p>
                                 I love all kinds of art but I am saddened by the lack of it in our daily lives.
                                 We see different forms of art every day undoubtedly but while technology, sound,

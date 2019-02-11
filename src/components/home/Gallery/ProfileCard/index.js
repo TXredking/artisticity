@@ -6,6 +6,14 @@ class ProfileCard extends Component {
     render () {
         const { carousel_id, style_id, alt, profile_img, name, other_imgs } = this.props.profile;
         const images = [{src: profile_img}, ...other_imgs];
+        console.log(images)
+        let modalBody;
+
+        if (images.length > 1) {
+            modalBody = <Carousel img_list={images} carousel_id={carousel_id} carousel_class="profile-carousels"/>
+        } else {
+            modalBody = <img class="d-block w-100" src={images[0].src} alt={images[0].alt || 'Photo from Unsplash'}/>;
+        }
 
         return (
             <div>
@@ -27,7 +35,7 @@ class ProfileCard extends Component {
                         </button>
                       </div>
                       <div className="modal-body">
-                        <Carousel img_list={images} carousel_id={carousel_id} carousel_class="profile-carousels"/>
+                        {modalBody}
                       </div>
                       <div className="modal-footer">
                         <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>

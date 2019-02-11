@@ -10,3 +10,8 @@
 .card-body {
     background-color: #10D0CD;
 }
+
+.modal-body img{
+    object-fit: cover;
+    max-height: 400px;
+}

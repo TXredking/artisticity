@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Carousel from './Carousel';
-import Jumbotron from '../common/Jumbotron';
+import Jumbotron from './Jumbotron';
 import Gallery from './Gallery';
 
 import images from '../../images';

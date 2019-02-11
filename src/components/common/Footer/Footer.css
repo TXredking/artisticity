@@ -1,6 +1,7 @@
-/* footer {
-    position: fixed;
-    height: 50px;
+footer {
     bottom: 0;
+    height: 60px;
+    left: 0;
+    position: absolute;
     width: 100%;
-} */
+}

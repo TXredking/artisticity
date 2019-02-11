@@ -17,7 +17,7 @@ class Carousel extends Component {
 
         return (
             <div>
-               <div id={carousel_id} className="carousel slide" data-ride="carousel" data-interval="5000">
+               <div id={carousel_id} className="carousel slide" data-ride="carousel" data-interval="10000">
                 <div className="carousel-inner">
                     {carouselItems}
                 </div>
